@@ -1,25 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "next.config.ts",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/socketio",
-      "dest": "/server.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
   "env": {
     "NODE_ENV": "production"
   }
